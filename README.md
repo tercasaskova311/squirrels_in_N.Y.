@@ -24,6 +24,7 @@ Sighters in the park observed the activities of squirrels, including the option 
 To determine if there is a statistically significant difference in the eating habits between the two groups of squirrels, a proportion test was done in Python. This helps us understand if the observed difference in eating behavior is due to chance or if it reflects a true difference in the population of squirrels in N.Y. parks.
 
 #### Results:
+-----
 The analysis indicates that squirrels that approach humans are more likely to eat compared to those that do not approach humans. The proportion of eating squirrels is significantly higher among those that approach people.
 
 These are insights into the stats and behavior of squirrels in N.Y. parks & their interactions with people. 
