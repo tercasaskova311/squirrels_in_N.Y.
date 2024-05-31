@@ -1,8 +1,8 @@
-### Squirrels in N.Y. parks
+## Squirrels in N.Y. parks
 
 Have you ever wondered how many squirrels are in New York City parks? No? Here are the stats anyway.
 
-## NYC OPEN DATA WEEK MULTI-PARK SQUIRREL COUNT
+#### NYC OPEN DATA WEEK MULTI-PARK SQUIRREL COUNT
 "The Squirrel Census is a multimedia science, design, and storytelling project focusing on the Eastern gray (Sciurus carolinensis). They count squirrels and present their findings to the public: On March 1, 2020 — with the help of 72 volunteer Squirrel Sighters, as well as NYC Open Data — they performed a sample count in 24 New York City parks, and gathered other material data. Four hundred and thirty-three squirrel sightings were tallied. The methodology was less focused on total squirrel numbers per hectare and more attuned to the stories — of squirrels, humans, and parks."
 
 www.thesquirrelcensus.com/data
@@ -13,10 +13,8 @@ www.thesquirrelcensus.com/data
 1. **Population Count**: The number of squirrels observed in New York City parks.
 2. **Observation Duration**: The average time observers spend sighting squirrels.
 3. **Color Distribution**: The color variations among the squirrels in the parks.
-
-Check the dataset for more info.
 -----------
-#### Main Question:
+## Main Question:
 
 "Is there a significant difference in the eating habits between squirrels that approach people and those that do not?"
 
