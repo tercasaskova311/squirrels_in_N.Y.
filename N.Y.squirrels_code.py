@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
 
 
 import pandas as pd
@@ -129,7 +125,7 @@ print(f"Graph saved to {download_path}")
 # In[17]:
 
 
-activity_counts = squirrel_data['Activities'].value_counts()  # Replace 'activity_column' with the actual column name
+activity_counts = squirrel_data['Activities'].value_counts()  
 df2= activity_counts
    
 
@@ -159,7 +155,7 @@ df4
 # In[20]:
 
 
-df5= color_distribution = squirrel_data['Primary Fur Color'].value_counts()  # Replace 'color_column' with the actual column name
+df5= color_distribution = squirrel_data['Primary Fur Color'].value_counts()  
 
 df5
 
@@ -184,14 +180,12 @@ pip install xlsxwriter
 
 import pandas as pd
 
-# Sample data setup (replace these with your actual data)
-# Assuming merged_data, squirrel_data, and park_data are pre-existing DataFrames
 
 # Create DataFrames with the relevant data
 squirrel_counts = merged_data['Park Name'].value_counts()
 df1 = merged_data.groupby('Park Name').size().reset_index(name='squirrel_count')
 
-activity_counts = squirrel_data['Activities'].value_counts()  # Replace 'Activities' with the actual column name
+activity_counts = squirrel_data['Activities'].value_counts() 
 df2 = activity_counts.reset_index().rename(columns={'index': 'Activity', 'Activities': 'Count'})
 
 squirrel_stats = squirrel_data.describe()
@@ -200,16 +194,14 @@ df3 = squirrel_stats
 park_stats = park_data.describe()
 df4 = park_stats
 
-color_distribution = squirrel_data['Primary Fur Color'].value_counts()  # Replace 'Primary Fur Color' with the actual column name
+color_distribution = squirrel_data['Primary Fur Color'].value_counts()  
 df5 = color_distribution.reset_index().rename(columns={'index': 'Color', 'Primary Fur Color': 'Count'})
 
 squirrels_per_park = merged_data.groupby('Park Name').size().reset_index(name='squirrel_count')
 df6 = squirrels_per_park
 
-# Specify the download path
 download_path = '/Users/terezasaskova/Desktop/Python/multiple_dataframes.xlsx'
 
-# Save the DataFrames to a single Excel file with multiple sheets
 with pd.ExcelWriter(download_path, engine='xlsxwriter') as writer:
     df1.to_excel(writer, sheet_name='Sheet1', index=False)
     df2.to_excel(writer, sheet_name='Sheet2', index=False)
@@ -360,14 +352,10 @@ print(f"Proportion of squirrels that do not approach humans and eat: {not_approa
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Assuming `approach_humans_data` and `not_approach_humans_data` are pandas DataFrames
-# and `eating_column` is the name of the column indicating the eating activity.
 
-# Calculate the proportion of squirrels eating in each group
 approach_humans_eating_proportion = (approach_humans_data[eating_column] == 'Eating').mean()
 not_approach_humans_eating_proportion = (not_approach_humans_data[eating_column] == 'Eating').mean()
 
-# Prepare data for plotting
 approach_humans_eating = {'Eating': approach_humans_eating_proportion, 'Not Eating': 1 - approach_humans_eating_proportion}
 not_approach_humans_eating = {'Eating': not_approach_humans_eating_proportion, 'Not Eating': 1 - not_approach_humans_eating_proportion}
 
